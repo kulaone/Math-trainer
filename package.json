@@ -1,0 +1,31 @@
+{
+  "name": "math_trainer",
+  "description": "Google Actions Math trainer using Webhook",
+  "version": "0.0.1",
+  "private": true,
+  "license": "Apache-2.0",
+  "author": "Daniel Gwerzman",
+  "scripts": {
+    "lint": "semistandard \"**/*.js\"",
+    "start": "functions deploy math_trainer --trigger-http",
+    "deploy": "gcloud beta functions deploy math_trainer --trigger-http --stage-bucket <storage_bucket_name>",
+    "test": "npm run lint"
+  },
+  "semistandard": {
+    "globals": [
+      "after",
+      "afterEach",
+      "before",
+      "beforeEach",
+      "describe",
+      "it"
+    ]
+  },
+  "dependencies": {
+    "sprintf-js": "^1.0.3",
+    "actions-on-google": "^1.0.0"
+  },
+  "devDependencies": {
+    "semistandard": "^9.1.0"
+  }
+}
